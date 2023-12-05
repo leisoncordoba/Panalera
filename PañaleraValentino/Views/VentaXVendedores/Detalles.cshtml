@@ -1,0 +1,52 @@
+﻿@model PañaleraValentino.Models.VentaXVendedores
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <form action="/VentaXVendedores/Modificar" method="post">
+        <div class="form-group">
+
+            <label for="numventa">numventa: </label>
+            <label for="numventa" name="numventa">@Model.numventa</label>
+            <input type="hidden" name="numventa" value="@Model.numventa" />
+        </div>
+        <div class="form-group">
+            <label for="idvendedor">IdVendedor: </label>
+            <label for="idvendedor" name="IdVendedor">@Model.IdVendedor</label>
+            <input type="hidden" name="IdVendedor" value="@Model.IdVendedor" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="idventa">IdVenta: </label>
+            <label for="idventa" name="IdVenta">@Model.IdVenta</label>
+            <input type="hidden" name="IdVenta" value="@Model.IdVenta" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="fechadeventa">FechaDeVenta: </label>
+            <label for="FechaDeVenta" name="FechaDeVenta">@Model.FechaDeVenta</label>
+            <input type="hidden" name="FechaDeVenta" value="@Model.FechaDeVenta" />
+
+        </div>
+
+        
+        <div class="form-group">
+            <br />
+            <a class="btn btn-primary btn-lg" href="/VentaXVendedores/Index" role="button">Regresar</a>
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+</div>

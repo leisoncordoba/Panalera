@@ -1,0 +1,88 @@
+﻿@model PañaleraValentino.Models.Proveedor
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <form action="/Proveedor/Modificar" method="post">
+        <div class="form-group">
+
+            <label for="idproveedor">IdProveedor: </label>
+            <label for="idproveedor" name="IdProveedor">@Model.IdProveedor</label>
+            <input type="hidden" name="IdProveedor" value="@Model.IdProveedor" />
+        </div>
+        <div class="form-group">
+            <label for="nombrecompañia">NombreCompañia: </label>
+            <label for="nombrecompañia" name="NombreCompañia">@Model.NombreCompañia</label>
+            <input type="hidden" name="NombreCompañia" value="@Model.NombreCompañia" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="nombrecontacto">NombreContacto: </label>
+            <label for="nombrecontacto" name="NombreContacto">@Model.NombreContacto</label>
+            <input type="hidden" name="NombreContacto" value="@Model.NombreContacto" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="ciudad">Ciudad: </label>
+            <label for="ciudad" name="Ciudad">@Model.Ciudad</label>
+            <input type="hidden" name="Ciudad" value="@Model.Ciudad" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="direccion">Direccion: </label>
+            <label for="direccion" name="Direccion">@Model.Direccion</label>
+            <input type="hidden" name="Direccion" value="@Model.Direccion" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Telefono: </label>
+            <label for="telefono" name="Telefono">@Model.Telefono</label>
+            <input type="hidden" name="Telefono" value="@Model.Telefono" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="fecharegistro">FechaRegistro: </label>
+            <label for="fecharegistro" name="FechaRegistro">@Model.FechaRegistro</label>
+            <input type="hidden" name="FechaRegistro" value="@Model.FechaRegistro" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <label for="email" name="Email">@Model.Email</label>
+            <input type="hidden" name="Email" value="@Model.Email" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="observaciones">Observaciones: </label>
+            <label for="observaciones" name="Observaciones">@Model.Observaciones</label>
+            <input type="hidden" name="Observaciones" value="@Model.Observaciones" />
+
+        </div>
+
+       
+
+        <div class="form-group">
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Proveedor/Index" role="button">Regresar</a>
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+</div>

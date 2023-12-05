@@ -1,0 +1,96 @@
+﻿@model PañaleraValentino.Models.Producto
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <form action="/Vendedores/Modificar" method="post">
+        <div class="form-group">
+
+            <label for="idproducto">IdProducto: </label>
+            <label for="idproducto" name="IdProducto">@Model.IdProducto</label>
+            <input type="hidden" name="IdVendedor" value="@Model.IdProducto" />
+        </div>
+        <div class="form-group">
+            <label for="idcategoria">IdCategoria: </label>
+            <label for="idcategoria" name="IdCategoria">@Model.IdCategoria</label>
+            <input type="hidden" name="IdCategoria" value="@Model.IdCategoria" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="idubicacion">IdUbicacion: </label>
+            <label for="idubicacion" name="IdUbicacion">@Model.IdUbicacion</label>
+            <input type="hidden" name="IdUbicacion" value="@Model.IdUbicacion" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="unidempaque">UnidEmpaque: </label>
+            <label for="UnidEmpaque" name="UnidEmpaque">@Model.UnidEmpaque</label>
+            <input type="hidden" name="UnidEmpaque" value="@Model.UnidEmpaque" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="costounidad">CostoUnidad: </label>
+            <label for="costounidad" name="CostoUnidad">@Model.CostoUnidad</label>
+            <input type="hidden" name="CostoUnidad" value="@Model.CostoUnidad" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="stock_final">Stock_Final: </label>
+            <label for="stock_final" name="Stock_Final">@Model.Stock_Final</label>
+            <input type="hidden" name="Stock_Final" value="@Model.Stock_Final" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripcion: </label>
+            <label for="descripcion" name="Descripcion">@Model.Descripcion</label>
+            <input type="hidden" name="Descripcion" value="@Model.Descripcion" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="cantminpedir">CantMinPedir: </label>
+            <label for="cantminpedir" name="CantMinPedir">@Model.CantMinPedir</label>
+            <input type="hidden" name="CantMinPedir" value="@Model.CantMinPedir" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="cantmaxpedir">CantMaxPedir: </label>
+            <label for="cantmaxpedir" name="CantMaxPedir">@Model.CantMaxPedir</label>
+            <input type="hidden" name="CantMaxPedir" value="@Model.CantMaxPedir" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="puntopedido">PuntoPedido: </label>
+            <label for="puntopedido" name="PuntoPedido">@Model.PuntoPedido</label>
+            <input type="hidden" name="PuntoPedido" value="@Model.PuntoPedido" />
+
+        </div>
+
+
+
+        <div class="form-group">
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Producto/Index" role="button">Regresar</a>
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+</div>
+

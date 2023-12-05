@@ -1,0 +1,36 @@
+﻿@model PañaleraValentino.Models.Devoluciones
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+
+<div>
+    <form action="/Devoluciones/Modificar" method="post">
+        <div class="form-group">
+            <label for="iddevoluciones">idDevoluciones: </label>
+            <label for="iddevoluciones" name="idDevoluciones">@Model.idDevoluciones</label>
+            <input type="hidden" name="idDevoluciones" value="@Model.idDevoluciones" />
+
+        </div>
+        <div class="form-group">
+            <label for="idproducto">idProducto: </label>
+            <input type="text" class="form-control" name="idProducto" value="@Model.idProducto" />
+        </div>
+
+        
+        <div class="form-group">
+            <p><button class="btn btn-primary btn-lg" type="submit" role="button">Guardar</button></p>
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Devoluciones/Index" role="button">Cancelar</a>
+        </div>
+
+
+
+    </form>
+
+
+
+
+</div>

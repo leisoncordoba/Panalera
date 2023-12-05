@@ -1,0 +1,60 @@
+﻿@model PañaleraValentino.Models.ProductosXProveedores
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <form action="/ProductosXProveedores/Modificar" method="post">
+        <div class="form-group">
+
+            <label for="idproveedor">NumPedido: </label>
+            <label for="idproveedor" name="NumPedido">@Model.NumPedido</label>
+            <input type="hidden" name="NumPedido" value="@Model.NumPedido" />
+        </div>
+        <div class="form-group">
+            <label for="idproveedor">IdProveedor: </label>
+            <label for="idproveedor" name="IdProveedor">@Model.IdProveedor</label>
+            <input type="hidden" name="IdProveedor" value="@Model.IdProveedor" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="idproducto">idProducto: </label>
+            <label for="idproducto" name="idProducto">@Model.idProducto</label>
+            <input type="hidden" name="idProducto" value="@Model.idProducto" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="unidadespedidas">Unidadespedidas: </label>
+            <label for="unidadespedidas" name="Unidadespedidas">@Model.Unidadespedidas</label>
+            <input type="hidden" name="Unidadespedidas" value="@Model.Unidadespedidas" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="fechaentrega">FechaEntrega: </label>
+            <label for="fechaentrega" name="FechaEntrega">@Model.FechaEntrega</label>
+            <input type="hidden" name="FechaEntrega" value="@Model.FechaEntrega" />
+
+        </div>
+
+        
+        <div class="form-group">
+            <br />
+            <a class="btn btn-primary btn-lg" href="/ProductosXProveedores/Index" role="button">Regresar</a>
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+</div>
+

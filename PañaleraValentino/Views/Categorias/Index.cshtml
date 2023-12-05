@@ -1,0 +1,54 @@
+﻿@model IEnumerable<PañaleraValentino.Models.Categorias>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-9">
+        <h2>Index</h2>
+    </div>
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Categorias/Crear" role="button">Crear Nueva Categoria</a></p>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Lista De Categoria</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdCategoria</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+
+            </tr>
+
+        </thead>
+        @foreach (var ca in Model)
+        {
+            <tr>
+
+                <td>@ca.IdCategoria</td>
+                <td>@ca.Nombre</td>
+                <td>@ca.Descripcion</td>
+
+
+
+                <td><a class="btn btn-primary btn-lg" href="/Categorias/Editar/@ca.IdCategoria" role="button">Editar</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Categorias/Detalles/@ca.IdCategoria" target="_blank" role="button">Detalles</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Categorias/Eliminar/@ca.IdCategoria" role="button">Eliminar</a></td>
+            </tr>
+
+        }
+
+
+    </table>
+
+
+
+</div>

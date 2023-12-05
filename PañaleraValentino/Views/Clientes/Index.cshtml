@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PañaleraValentino.Models.Clientes>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-9">
+        <h2>Index</h2>
+    </div>
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Clientes/Crear" role="button">Crear Nuevo Cliente</a></p>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Lista De Clientes</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdCliente</th>
+                <th>Nombre</th>
+                <th>RazonSocial</th>
+                <th>Nit</th>
+                <th>Ciudad</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>EMail</th>
+                
+            </tr>
+
+        </thead>
+        @foreach (var cl in Model)
+        {
+            <tr>
+
+                <td>@cl.IdCliente</td>
+                <td>@cl.Nombre</td>
+                <td>@cl.RazonSocial</td>
+                <td>@cl.Nit</td>
+                <td>@cl.Ciudad</td>
+                <td>@cl.Direccion</td>
+                <td>@cl.Telefono</td>
+                <td>@cl.EMail</td>
+
+
+
+
+                <td><a class="btn btn-primary btn-lg" href="/Clientes/Editar/@cl.IdCliente" role="button">Editar</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Clientes/Detalles/@cl.IdCliente" target="_blank" role="button">Detalles</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Clientes/Eliminar/@cl.IdCliente" role="button">Eliminar</a></td>
+            </tr>
+
+        }
+
+
+    </table>
+
+
+
+</div>

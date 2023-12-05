@@ -1,0 +1,43 @@
+﻿@model PañaleraValentino.Models.Vendedores
+@{
+    ViewBag.Title = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Crear</h2>
+<div>
+    <form action="/Vendedores/Guardar" method="post">
+        <div class="form-group">
+            <label for="idvendedor">IdVendedor: </label>
+            <input type="text" class="form-control" name="IdVendedor" id="IdVendedor" />
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre: </label>
+            <input type="text" class="form-control" name="Nombre" id="Nombre" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="fechaderegistro">FechaDeRegistro: </label>
+            <input type="text" class="form-control" name="FechaDeRegistro" id="FechaDeRegistro" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Telefono: </label>
+            <input type="text" class="form-control" name="Telefono" id="Telefono" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="text" class="form-control" name="Email" id="Email" />
+
+        </div>
+
+        <div class="form-group">
+            <p><button class="btn btn-primary btn-lg" type="submit" role="button">Guardar</button></p>
+        </div>
+    </form>
+
+</div>

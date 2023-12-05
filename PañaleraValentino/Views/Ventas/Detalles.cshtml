@@ -1,0 +1,65 @@
+﻿@model PañaleraValentino.Models.Ventas
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <form action="/Ventas/Modificar" method="post">
+        <div class="form-group">
+
+            <label for="idventa">IdVenta: </label>
+            <label for="idventa" name="IdVenta">@Model.IdVenta</label>
+            <input type="hidden" name="IdVenta" value="@Model.IdVenta" /> 
+        </div>
+        <div class="form-group">
+            <label for="fecha">Fecha: </label>
+            <label for="fecha" name="Fecha">@Model.Fecha</label>
+            <input type="hidden" name="Fecha" value="@Model.Fecha" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="precio">Precio: </label>
+            <label for="precio" name="Precio">@Model.Precio</label>
+            <input type="hidden" name="Precio" value="@Model.Precio" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="descuento">Descuento: </label>
+            <label for="descuento" name="Descuento">@Model.Descuento</label>
+            <input type="hidden" name="Descuento" value="@Model.Descuento" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="iva">Iva: </label>
+            <label for="iva" name="IVA">@Model.IVA</label>
+            <input type="hidden" name="IVA" value="@Model.IVA" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="total">Total: </label>
+            <label for="total" name="Total">@Model.Total</label>
+            <input type="hidden" name="Total" value="@Model.Total" />
+
+        </div>
+
+        <div class="form-group">
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Ventas/Index" role="button">Regresar</a>
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+</div>

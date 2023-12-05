@@ -1,0 +1,43 @@
+﻿@model PañaleraValentino.Models.Garantia
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+
+<div>
+    <form action="/Garantia/Modificar" method="post">
+        <div class="form-group">
+            <label for="idgarantia">idGarantia: </label>
+            <label for="idgarantia" name="idGarantia">@Model.idGarantia</label>
+            <input type="hidden" name="idGarantia" value="@Model.idGarantia" />
+
+        </div>
+        <div class="form-group">
+            <label for="idproducto">idProducto: </label>
+            <input type="text" class="form-control" name="idProducto" value="@Model.idProducto" />
+        </div>
+
+        <div class="form-group">
+            <label for="idvendedor">idVendedor: </label>
+            <input type="text" class="form-control" name="idVendedor" value="@Model.idVendedor" />
+        </div>
+
+        
+
+        <div class="form-group">
+            <p><button class="btn btn-primary btn-lg" type="submit" role="button">Guardar</button></p>
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Garantia/Index" role="button">Cancelar</a>
+        </div>
+
+
+
+    </form>
+
+
+
+
+</div>
+

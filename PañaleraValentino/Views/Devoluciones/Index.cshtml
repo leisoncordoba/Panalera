@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PañaleraValentino.Models.Devoluciones>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-9">
+        <h2>Index</h2>
+    </div>
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Devoluciones/Crear" role="button">Crear Nueva Devoluciones</a></p>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Lista De Devoluciones</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>idDevoluciones</th>
+                <th>idProducto</th>
+               
+
+
+            </tr>
+
+        </thead>
+        @foreach (var de in Model)
+        {
+            <tr>
+
+                <td>@de.idDevoluciones</td>
+                <td>@de.idProducto</td>
+                
+
+
+
+
+                <td><a class="btn btn-primary btn-lg" href="/Devoluciones/Editar/@de.idDevoluciones" role="button">Editar</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Devoluciones/Detalles/@de.idDevoluciones" target="_blank" role="button">Detalles</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Devoluciones/Eliminar/@de.idDevoluciones" role="button">Eliminar</a></td>
+            </tr>
+
+        }
+
+
+    </table>
+
+
+
+</div>

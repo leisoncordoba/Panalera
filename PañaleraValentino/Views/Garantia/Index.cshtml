@@ -1,0 +1,53 @@
+﻿@model IEnumerable<PañaleraValentino.Models.Garantia>
+    @{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>Index</h2>
+
+    <div class="row">
+        <div class="col-lg-9">
+            <h2>Index</h2>
+        </div>
+        <div class="col-lg-2">
+            <p><a class="btn btn-primary btn-lg" href="/Garantia/Crear" role="button">Crear Nueva Garantia</a></p>
+        </div>
+
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Lista De Garantia</div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>idGarantia</th>
+                    <th>idProducto</th>
+                    <th>idVendedor</th>
+
+                </tr>
+
+            </thead>
+            @foreach (var ga in Model)
+            {
+                <tr>
+                    <td>@ga.idGarantia</td>
+                    <td>@ga.idProducto</td>
+                    <td>@ga.idVendedor</td>
+
+
+
+                    <td><a class="btn btn-primary btn-lg" href="/Garantia/Editar/@ga.idGarantia" role="button">Editar</a></td>
+                    <td><a class="btn btn-primary btn-lg" href="/Garantia/Detalles/@ga.idGarantia" target="_blank" role="button">Detalles</a></td>
+                    <td><a class="btn btn-primary btn-lg" href="/Garantia/Eliminar/@ga.idGarantia" role="button">Eliminar</a></td>
+                </tr>
+
+            }
+
+
+        </table>
+
+
+
+    </div>

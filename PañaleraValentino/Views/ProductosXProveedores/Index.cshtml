@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PañaleraValentino.Models.ProductosXProveedores>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-9">
+        <h2>Index</h2>
+    </div>
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/ProductosXProveedores/Crear" role="button">Crear Nuevo ProductosXProveedores</a></p>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Lista De ProductosXProveedores</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>NumPedido</th>
+                <th>IdProveedor</th>
+                <th>idProducto</th>
+                <th>Unidadespedidas</th>
+                <th>FechaEntrega</th>
+                
+
+            </tr>
+
+        </thead>
+        @foreach (var px in Model)
+        {
+            <tr>
+
+                <td>@px.NumPedido</td>
+                <td>@px.IdProveedor</td>
+                <td>@px.idProducto</td>
+                <td>@px.Unidadespedidas</td>
+                <td>@px.FechaEntrega</td>
+                
+
+
+
+                <td><a class="btn btn-primary btn-lg" href="/ProductosXProveedores/Editar/@px.NumPedido" role="button">Editar</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/ProductosXProveedores/Detalles/@px.NumPedido" target="_blank" role="button">Detalles</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/ProductosXProveedores/Eliminar/@px.NumPedido" role="button">Eliminar</a></td>
+            </tr>
+
+        }
+
+
+    </table>
+
+
+
+</div>

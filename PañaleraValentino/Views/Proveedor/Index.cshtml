@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PañaleraValentino.Models.Proveedor>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-9">
+        <h2>Index</h2>
+    </div>
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Proveedor/Crear" role="button">Crear Nuevo Proveedor</a></p>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Lista De Proveedor</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdProveedor</th>
+                <th>NombreCompañia</th>
+                <th>NombreContacto</th>
+                <th>Ciudad</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>FechaRegistro</th>
+                <th>Email</th>
+                <th>Observaciones</th>
+
+            </tr>
+
+        </thead>
+        @foreach (var pr in Model)
+        {
+            <tr>
+
+                <td>@pr.IdProveedor</td>
+                <td>@pr.NombreCompañia</td>
+                <td>@pr.NombreContacto</td>
+                <td>@pr.Ciudad</td>
+                <td>@pr.Direccion</td>
+                <td>@pr.Telefono</td>
+                <td>@pr.FechaRegistro</td>
+                <td>@pr.Email</td>
+                <td>@pr.Observaciones</td>
+               
+
+
+                <td><a class="btn btn-primary btn-lg" href="/Proveedor/Editar/@pr.IdProveedor" role="button">Editar</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Proveedor/Detalles/@pr.IdProveedor" target="_blank" role="button">Detalles</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Proveedor/Eliminar/@pr.IdProveedor" role="button">Eliminar</a></td>
+            </tr>
+
+        }
+
+
+    </table>
+
+
+
+</div>

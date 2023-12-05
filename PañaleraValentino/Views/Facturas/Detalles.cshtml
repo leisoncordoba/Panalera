@@ -1,0 +1,89 @@
+﻿@model PañaleraValentino.Models.Facturas
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <form action="/Clientes/Modificar" method="post">
+        <div class="form-group">
+
+            <label for="idfacturas">IdFacturas: </label>
+            <label for="idfacturas" name="IdFacturas">@Model.IdFacturas</label>
+            <input type="hidden" name="IdFacturas" value="@Model.IdFacturas" />
+        </div>
+
+        <div class="form-group">
+            <label for="idcliente">IdCliente: </label>
+            <label for="idcliente" name="IdCliente">@Model.IdCliente</label>
+            <input type="hidden" name="IdCliente" value="@Model.IdCliente" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="idproducto">IdProducto: </label>
+            <label for="idproducto" name="IdProducto">@Model.IdProducto</label>
+            <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="iva">IVA: </label>
+            <label for="iva" name="IVA">@Model.IVA</label>
+            <input type="hidden" name="IVA" value="@Model.IVA" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="detalle">detalle: </label>
+            <label for="detalle" name="detalle">@Model.detalle</label>
+            <input type="hidden" name="detalle" value="@Model.detalle" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="fecha">Fecha: </label>
+            <label for="fecha" name="Fecha">@Model.Fecha</label>
+            <input type="hidden" name="Fecha" value="@Model.Fecha" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="descuento">descuento: </label>
+            <label for="descuento" name="descuento">@Model.descuento</label>
+            <input type="hidden" name="descuento" value="@Model.descuento" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="subtotal">subtotal: </label>
+            <label for="subtotal" name="subtotal">@Model.subtotal</label>
+            <input type="hidden" name="subtotal" value="@Model.subtotal" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="total">Total: </label>
+            <label for="total" name="Total">@Model.Total</label>
+            <input type="hidden" name="Total" value="@Model.Total" />
+
+        </div>
+
+
+
+        <div class="form-group">
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Facturas/Index" role="button">Regresar</a>
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+</div>

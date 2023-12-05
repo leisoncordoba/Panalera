@@ -1,0 +1,82 @@
+﻿@model PañaleraValentino.Models.Clientes
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <form action="/Clientes/Modificar" method="post">
+        <div class="form-group">
+
+            <label for="idcliente">IdCliente: </label>
+            <label for="idcliente" name="IdCliente">@Model.IdCliente</label>
+            <input type="hidden" name="IdCliente" value="@Model.IdCliente" />
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre: </label>
+            <label for="nombre" name="Nombre">@Model.Nombre</label>
+            <input type="hidden" name="Nombre" value="@Model.Nombre" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="razonsocial">RazonSocial: </label>
+            <label for="razonsocial" name="RazonSocial">@Model.RazonSocial</label>
+            <input type="hidden" name="RazonSocial" value="@Model.RazonSocial" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="nit">Nit: </label>
+            <label for="nit" name="Nit">@Model.Nit</label>
+            <input type="hidden" name="Nit" value="@Model.Nit" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="ciudad">Ciudad: </label>
+            <label for="ciudad" name="Ciudad">@Model.Ciudad</label>
+            <input type="hidden" name="Ciudad" value="@Model.Ciudad" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="direccion">Direccion: </label>
+            <label for="direccion" name="Direccion">@Model.Direccion</label>
+            <input type="hidden" name="Direccion" value="@Model.Direccion" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Telefono: </label>
+            <label for="telefono" name="Telefono">@Model.Telefono</label>
+            <input type="hidden" name="Telefono" value="@Model.Telefono" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="email">EMail: </label>
+            <label for="email" name="EMail">@Model.EMail</label>
+            <input type="hidden" name="EMail" value="@Model.EMail" />
+
+        </div>
+
+       
+
+        <div class="form-group">
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Clientes/Index" role="button">Regresar</a>
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+</div>

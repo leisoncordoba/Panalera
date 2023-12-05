@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PañaleraValentino.Models.Producto>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-9">
+        <h2>Index</h2>
+    </div>
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Producto/Crear" role="button">Crear Nuevo Producto</a></p>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Lista De Producto</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdProducto</th>
+                <th>IdCategoria</th>
+                <th>IdUbicacion</th>
+                <th>UnidEmpaque</th>
+                <th>CostoUnidad</th>
+                <th>Stock_Final</th>
+                <th>Descripcion</th>
+                <th>CantMinPedir</th>
+                <th>CantMaxPedir</th>
+                <th>PuntoPedido</th>
+            </tr>
+        </thead>
+
+
+        @foreach (var pr in Model)
+        {
+
+            <tr>
+                <td>@pr.IdProducto</td>
+                <td>@pr.IdCategoria</td>
+                <td>@pr.IdUbicacion</td>
+                <td>@pr.UnidEmpaque</td>
+                <td>@pr.CostoUnidad</td>
+                <td>@pr.Stock_Final</td>
+                <td>@pr.Descripcion</td>
+                <td>@pr.CantMinPedir</td>
+                <td>@pr.CantMaxPedir</td>
+                <td>@pr.PuntoPedido</td>
+
+
+                <td><a class="btn btn-primary btn-lg" href="/Producto/Editar/@pr.IdProducto" role="button">Editar</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Producto/Detalles/@pr.IdProducto" target="_blank" role="button">Detalles</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Producto/Eliminar/@pr.IdProducto" role="button">Eliminar</a></td>
+
+            </tr>
+
+        }
+    </table>
+
+
+</div>
+

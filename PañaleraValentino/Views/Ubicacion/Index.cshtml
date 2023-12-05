@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PañaleraValentino.Models.Ubicacion>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-9">
+        <h2>Index</h2>
+    </div>
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/Ubicacion/Crear" role="button">Crear Nueva Ubicacion</a></p>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Lista De Ubicacion</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdUbicacion</th>
+                <th>Nombre</th>
+                <th>Area</th>
+
+            </tr>
+
+        </thead>
+        @foreach (var ub in Model)
+        {
+            <tr>
+
+                <td>@ub.IdUbicacion</td>
+                <td>@ub.Nombre</td>
+                <td>@ub.Area</td>
+
+
+
+                <td><a class="btn btn-primary btn-lg" href="/Ubicacion/Editar/@ub.IdUbicacion" role="button">Editar</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Ubicacion/Detalles/@ub.IdUbicacion" target="_blank" role="button">Detalles</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/Ubicacion/Eliminar/@ub.IdUbicacion" role="button">Eliminar</a></td>
+            </tr>
+
+        }
+
+
+    </table>
+
+
+
+</div>
+

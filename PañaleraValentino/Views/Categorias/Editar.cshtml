@@ -1,0 +1,42 @@
+﻿@model PañaleraValentino.Models.Categorias
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+
+<div>
+    <form action="/Categorias/Modificar" method="post">
+        <div class="form-group">
+            <label for="idcategoria">IdCategoria: </label>
+            <label for="idcategoria" name="IdCategoria">@Model.IdCategoria</label>
+            <input type="hidden" name="IdCategoria" value="@Model.IdCategoria" />
+
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre: </label>
+            <input type="text" class="form-control" name="Nombre" value="@Model.Nombre" />
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripcion: </label>
+            <input type="text" class="form-control" name="Descripcion" value="@Model.Descripcion" />
+        </div>
+
+
+
+        <div class="form-group">
+            <p><button class="btn btn-primary btn-lg" type="submit" role="button">Guardar</button></p>
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Categorias/Index" role="button">Cancelar</a>
+        </div>
+
+
+
+    </form>
+
+
+
+
+</div>

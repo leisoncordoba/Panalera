@@ -1,0 +1,54 @@
+﻿@model IEnumerable<PañaleraValentino.Models.VentaXVendedores>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-9">
+        <h2>Index</h2>
+    </div>
+    <div class="col-lg-2">
+        <p><a class="btn btn-primary btn-lg" href="/VentaXVendedores/Crear" role="button">Crear Nuevo VentaXVendedor</a></p>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Lista De VentaXVendedor</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>numventa</th>
+                <th>IdVendedor</th>
+                <th>IdVenta</th>
+                <th>FechaDeVenta</th>
+                
+            </tr>
+        </thead>
+
+
+        @foreach (var vex in Model)
+        {
+
+            <tr>
+                <td>@vex.numventa</td>
+                <td>@vex.IdVendedor</td>
+                <td>@vex.IdVenta</td>
+                <td>@vex.FechaDeVenta</td>
+               
+
+                <td><a class="btn btn-primary btn-lg" href="/VentaXVendedores/Editar/@vex.numventa" role="button">Editar</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/VentaXVendedores/Detalles/@vex.numventa" target="_blank" role="button">Detalles</a></td>
+                <td><a class="btn btn-primary btn-lg" href="/VentaXVendedores/Eliminar/@vex.numventa" role="button">Eliminar</a></td>
+
+            </tr>
+
+        }
+    </table>
+
+
+</div>
+

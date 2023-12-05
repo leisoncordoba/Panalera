@@ -1,0 +1,75 @@
+﻿@model PañaleraValentino.Models.Producto
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+
+<div>
+    <form action="/Producto/Modificar" method="post">
+        <div class="form-group">
+            <label for="idproducto">IdProducto: </label>
+            <label for="idproducto" name="IdProducto">@Model.IdProducto</label>
+            <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
+
+        </div>
+        <div class="form-group">
+            <label for="idcategoria">IdCategoria: </label>
+            <input type="text" class="form-control" name="IdCategoria" value="@Model.IdCategoria" />
+        </div>
+
+        <div class="form-group">
+            <label for="idubicacion">IdUbicacion: </label>
+            <input type="text" class="form-control" name="IdUbicacion" value="@Model.IdUbicacion" />
+        </div>
+
+        <div class="form-group">
+            <label for="unidempaque">UnidEmpaque: </label>
+            <input type="text" class="form-control" name="UnidEmpaque" value="@Model.UnidEmpaque" />
+        </div>
+
+        <div class="form-group">
+            <label for="costounidad">CostoUnidad: </label>
+            <input type="text" class="form-control" name="CostoUnidad" value="@Model.CostoUnidad" />
+        </div>
+
+        <div class="form-group">
+            <label for="stock_final">Stock_Final: </label>
+            <input type="text" class="form-control" name="Stock_Final" value="@Model.Stock_Final" />
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripcion: </label>
+            <input type="text" class="form-control" name="Descripcion" value="@Model.Descripcion" />
+        </div>
+
+        <div class="form-group">
+            <label for="cantminpedir">CantMinPedir: </label>
+            <input type="text" class="form-control" name="CantMinPedir" value="@Model.CantMinPedir" />
+        </div>
+
+        <div class="form-group">
+            <label for="cantmaxpedir">CantMaxPedir: </label>
+            <input type="text" class="form-control" name="CantMaxPedir" value="@Model.CantMaxPedir" />
+        </div>
+
+        <div class="form-group">
+            <label for="puntopedido">PuntoPedido: </label>
+            <input type="text" class="form-control" name="PuntoPedido" value="@Model.PuntoPedido" />
+        </div>
+
+        <div class="form-group">
+            <p><button class="btn btn-primary btn-lg" type="submit" role="button">Guardar</button></p>
+            <br />
+            <a class="btn btn-primary btn-lg" href="/Producto/Index" role="button">Cancelar</a>
+        </div>
+
+
+
+    </form>
+
+
+
+
+</div>
